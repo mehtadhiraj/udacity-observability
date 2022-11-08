@@ -48,7 +48,7 @@ Severity: Medium
 
 Description: On hitting /trace of trial service we encountered 500 internal server error. This was found around 5 Nov 2022, 10:30 pm.
 
-![Jaeger Error Findings](answer-img/jaeger_error.png?raw=true)
+![Jaeger Error Findings](answer-img/jaegar_error.png?raw=true)
 
 
 ## Creating SLIs and SLOs
