@@ -1,7 +1,7 @@
 **Note:** For the screenshots, you can store all of your answer images in the `answer-img` directory.
 
 ## Verify the monitoring installation
-![Running pods and services for all components][https://github.com/mehtadhiraj/udacity-observability/answer-img/pods-svc.png?raw=true]
+![Running pods and services for all components][answer-img/pods-svc.png?raw=true]
 
 ## Setup the Jaeger and Prometheus source
 ![Home page of Grafana][https://github.com/mehtadhiraj/udacity-observability/answer-img/grafana-landing-screen.png?raw=true]
