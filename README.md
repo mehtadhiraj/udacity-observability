@@ -50,31 +50,39 @@ Description: On hitting /trace of trial service we encountered 500 internal serv
 
 
 ## Creating SLIs and SLOs
-- Availability - Microservice should serve atleast 99% of request successfully.
-- CPU Utilization - RAM and space utilization of CPU should not exceed 80%
-- Throughput - It indicates number of successfull request. 
+SLOs:
+1. 99% of availability per month
+2. Maximum latency of application should not exceed 1500 ms per month.
+3. CPU usage should not be more that 70% per month
+4. Memory usage should not go more than 600Mb per month.
+
+SLIs:
+1. 20x or 30x responses of the service for the month is 98.95%.
+2. Average latency of requests is 1037ms for the month.
+3. Average CPU usage by the services is 40.90% for the month
+4. Average memory usage by the application is 247Mib for the month.
 
 ## Building KPIs for our plan
-1. CPU utilization help us track allocated resources are sufficient for our service to perform well.
-    - The memory usage help us plan for load balancing to achieve the availability and help our customer engage with our platform. 
-    - With consistent high usage it indicates that we need to improvice our services. 
+1. 20x or 30x responses of the service for the month is 98.95%
+    - uptime per month - We can determine the usability of service with this KPI.
+    - success response - KPI help us indicate the availability of the services.
 
-2. Uptime of the service help us keep a check on availability of our services. 
-    - This metric help us understand the user experience on our application. 
-    - With ~99%  of successfull request userd are able to perform there task smoothly with less issues. 
+2. Average latency of requests is 1037ms for the month.
+    - latency - average response time of the application can be indicated from this KPI.
+    - traffic - number of request served by the application can be indicated by this KPI
 
-3. Throughput help us identify, traffic that our services can handle.
-    - This metric help us understand number of users landing on our platform for a particular. We can target and prioritse our services according to user behaviour. 
-    - With almost 5 successfull rpm we can accquire more user and engage them on our platform. 
+3. Average CPU usage by the services is 40.90% for the month
+    - cpu usage - CPU used by the pod for a given service can be indicated by this KPI.
+    - limit - we can identify if service is exceeding the alloted resources with the help of this KPI 
+
+4. Average memory usage by the application is 247Mib for the month.
+    - memory usage - memmory usage used by the pod for a given service can be indicated by this KPI.
+    - limit - we can identify if service is exceeding the alloted resources with the help of this KPI 
 
 ## Final Dashboard
-![CPU Utilization](answer-img/cpu_utilization.png?raw=true)
-
-- The above image give the utilization of memory in a container in last 6 hours. 
-- Memory value is given in bytes. 
-- Graph displays the memory utilization of every half hour. 
-
-![Throughput and Availability of Frontend and Backend](answer-img/kpi_dashboard.png?raw=true)
-
-- Above graph explains about the availability of backend services in last 24 hours. 
-- Spikes in the request per minute graph help us understand the number of request served in the given time frame.
+![Final Dashboard](answer-img/kpi_dashboard.png?raw=true)
+- Uptime panel - this says about the successful responses from the service.
+- Average Response Time panel - average response time of the service per request is represented in this panel.
+- CPU Usage panel - CPU usage of the service can be represented in this panel.
+- Memory Usage panel - memory usage of the service can be represented in this panel.
+- 50x and 40x Errors panel - error responses of the application.
