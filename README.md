@@ -7,8 +7,7 @@
 ![Home page of Grafana](answer-img/grafana-landing-screen.png?raw=true)
 
 ## Create a Basic Dashboard
-*TODO:* Create a dashboard in Grafana that shows Prometheus as a source. Take a screenshot and include it here.
-![Dashboard on Grafana](answer-img/basic-dashboard.png?raw=true)
+![Dashboard on Grafana](answer-img/data_sources.png?raw=true)
 
 ## Describe SLO/SLI
 - **SLO** - It stands for Service Level Objectives. It help us define the targets of non functional requirement for the given services. eg. - We can target for a monthly uptime of 99.9%. So, monthly uptime can be our SLO. 
@@ -22,10 +21,9 @@
 * Response Time
 
 ## Create a Dashboard to measure our SLIs
-![Error and Availability of Frontend and Backend](answer-img/availability-error.png?raw=true)
+![Error and Availability of Frontend and Backend](answer-img/backend_frontend_dashboard.png?raw=true)
 
 ## Tracing our Flask App
-*TODO:*  We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a screenshot of it here. Also provide a (screenshot) sample Python file containing a trace and span code used to perform Jaeger traces on the backend service.
 ![Jaeger Span](answer-img/jaeger_backend_landing.png?raw=true)
 
 ![Jaeger Code](answer-img/jaeger_code.png?raw=true)
@@ -52,19 +50,19 @@ Description: On hitting /trace of trial service we encountered 500 internal serv
 
 
 ## Creating SLIs and SLOs
-- Availability - Microservice Availability
-- Error frequency - occurrence of 4xx and 5xx error codes
+- Availability - Microservice Availability 
 - CPU Utilization - RAM and space utilization of CPU
+- Throughput - It indicates number of successfull request
 
 ## Building KPIs for our plan
 1. CPU utilization help us track allocated resources are sufficient for our service to perform well.
     - CPU memory usage
 
 2. Uptime of the service help us keep a check on availability of our services. 
-    - Availability of microservices (frontend/backend)
+    - Availability of microservices (backend) that is total successful http request in a given time. 
 
-3. Number or 4xx and 5xx error codes help us track the breaking functionality of the services
-    - Occurrence of 4xx and 5xx erro code
+3. Throughput help us identify, traffic that our services can handle.
+    - Basically it help us understand the number of successfull request per minute
 
 ## Final Dashboard
 ![CPU Utilization](answer-img/cpu_utilization.png?raw=true)
@@ -73,9 +71,7 @@ Description: On hitting /trace of trial service we encountered 500 internal serv
 - Memory value is given in bytes. 
 - Graph displays the memory utilization of every half hour. 
 
-![Error and Availability of Frontend and Backend](answer-img/availability-error.png?raw=true)
+![Throughput and Availability of Frontend and Backend](answer-img/kpi_dashboard.png?raw=true)
 
-- Above graph explains about the availability of frontend and backend services in last 24 hours. 
-- Each colour bar in status code graph represents the occurrences of 4xx and 5xx error code in given pod. 
-- Availability graph shows the availability of the services in last 24 hours. 
-- Area where there is no graph shows that service was down at the that time. 
+- Above graph explains about the availability of backend services in last 24 hours. 
+- Spikes in the request per minute graph help us understand the number of request served in the given time frame.
