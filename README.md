@@ -50,19 +50,22 @@ Description: On hitting /trace of trial service we encountered 500 internal serv
 
 
 ## Creating SLIs and SLOs
-- Availability - Microservice Availability 
-- CPU Utilization - RAM and space utilization of CPU
-- Throughput - It indicates number of successfull request
+- Availability - Microservice should serve atleast 99% of request successfully.
+- CPU Utilization - RAM and space utilization of CPU should not exceed 80%
+- Throughput - It indicates number of successfull request. 
 
 ## Building KPIs for our plan
 1. CPU utilization help us track allocated resources are sufficient for our service to perform well.
-    - CPU memory usage
+    - The memory usage help us plan for load balancing to achieve the availability and help our customer engage with our platform. 
+    - With consistent high usage it indicates that we need to improvice our services. 
 
 2. Uptime of the service help us keep a check on availability of our services. 
-    - Availability of microservices (backend) that is total successful http request in a given time. 
+    - This metric help us understand the user experience on our application. 
+    - With ~99%  of successfull request userd are able to perform there task smoothly with less issues. 
 
 3. Throughput help us identify, traffic that our services can handle.
-    - Basically it help us understand the number of successfull request per minute
+    - This metric help us understand number of users landing on our platform for a particular. We can target and prioritse our services according to user behaviour. 
+    - With almost 5 successfull rpm we can accquire more user and engage them on our platform. 
 
 ## Final Dashboard
 ![CPU Utilization](answer-img/cpu_utilization.png?raw=true)
