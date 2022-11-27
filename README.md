@@ -85,4 +85,4 @@ SLIs:
 - Average Response Time panel - average response time of the service per request is represented in this panel.
 - CPU Usage panel - CPU usage of the service can be represented in this panel.
 - Memory Usage panel - memory usage of the service can be represented in this panel.
-- 50x and 40x Errors panel - error responses of the application.
+- Error rate panel - error responses of the application.
