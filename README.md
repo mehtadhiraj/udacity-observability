@@ -80,7 +80,7 @@ SLIs:
     - limit - we can identify if service is exceeding the alloted resources with the help of this KPI 
 
 ## Final Dashboard
-![Final Dashboard](answer-img/kpi_dashboard.png?raw=true)
+![Final Dashboard](answer-img/final_dashboard.png)
 - Uptime panel - this says about the successful responses from the service.
 - Average Response Time panel - average response time of the service per request is represented in this panel.
 - CPU Usage panel - CPU usage of the service can be represented in this panel.
